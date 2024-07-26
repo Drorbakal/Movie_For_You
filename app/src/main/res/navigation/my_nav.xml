@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homePage2">
+    <fragment
+        android:id="@+id/homePage2"
+        android:name="com.example.myapplication.Repository.UI.HomePage"
+        android:label="home_page"
+        tools:layout="@layout/home_page" >
+        <action
+            android:id="@+id/action_homePage2_to_moviePageActivity"
+            app:destination="@id/moviePageActivity"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/homePage2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homePage2_to_favoritesPage2"
+            app:destination="@id/favoritesPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseSeatActivity"
+        android:name="com.example.myapplication.Repository.UI.ChooseSeatActivity"
+        android:label="choose_seat_page"
+        tools:layout="@layout/choose_seat_page" >
+        <action
+            android:id="@+id/action_chooseSeatActivity_to_moviePageActivity"
+            app:destination="@id/moviePageActivity" />
+        <action
+            android:id="@+id/action_chooseSeatActivity_to_homePage2"
+            app:destination="@id/homePage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviePageActivity"
+        android:name="com.example.myapplication.Repository.UI.MoviePageActivity"
+        android:label="movie_page"
+        tools:layout="@layout/movie_page" >
+        <action
+            android:id="@+id/action_moviePageActivity_to_homePage2"
+            app:destination="@id/homePage2"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_moviePageActivity_to_chooseSeatActivity"
+            app:destination="@id/chooseSeatActivity"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_moviePageActivity_to_picsMovieTrailer"
+            app:destination="@id/picsMovieTrailer" />
+        <action
+            android:id="@+id/action_moviePageActivity_to_homePage22"
+            app:destination="@id/homePage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/picsMovieTrailer"
+        android:name="com.example.myapplication.Repository.UI.PicsMovieTrailer"
+        android:label="pics_trailers_rating"
+        tools:layout="@layout/pics_trailers_rating" >
+        <action
+            android:id="@+id/action_picsMovieTrailer_to_reviewsPage"
+            app:destination="@id/reviewsPage" />
+        <action
+            android:id="@+id/action_picsMovieTrailer_to_moviePageActivity"
+            app:destination="@id/moviePageActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewsPage"
+        android:name="com.example.myapplication.Repository.UI.ReviewsPage"
+        android:label="reviews_page"
+        tools:layout="@layout/reviews_page" >
+        <action
+            android:id="@+id/action_reviewsPage_to_picsMovieTrailer"
+            app:destination="@id/picsMovieTrailer" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesPage2"
+        android:name="com.example.myapplication.Repository.UI.FavoritesPage"
+        android:label="likespage"
+        tools:layout="@layout/likespage" >
+        <action
+            android:id="@+id/action_favoritesPage2_to_homePage2"
+            app:destination="@id/homePage2" />
+    </fragment>
+</navigation>

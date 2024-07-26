@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "846897370430",
+    "project_id": "movieforyou-1f59a",
+    "storage_bucket": "movieforyou-1f59a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846897370430:android:6039876f7371623afbc86f",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcV8M9vD56NKtwuNk1TjqmnUk7o4wd7zs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
